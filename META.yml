@@ -1,5 +1,5 @@
 ---
-abstract: 'Plugin interface to Lingua::JA::Fold'
+abstract: 'Template plugin that interface to Lingua::JA::Fold'
 author:
   - 'Hideaki Ohno <hide.o.j55 {at} gmail.com>'
 build_requires:
@@ -24,4 +24,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/hideo55/p5-Template-Plugin-JA-Fold.git
-version: 0.01
+version: 0.02
