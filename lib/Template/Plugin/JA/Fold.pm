@@ -2,19 +2,20 @@ package Template::Plugin::JA::Fold;
 use strict;
 use warnings;
 use utf8;
+use 5.008001;
 use base qw(Template::Plugin);
 use Lingua::JA::Fold qw(fold);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub new {
 	my ( $class, $context, @params ) = @_;
-	$context->define_filter( 'fold' => $class->filter_factory() );
+	$context->define_filter( 'fold' => $class->_filter_factory() );
 	my $self = bless { _CONTEXT => $context, }, $class;
 	return $self;
 }
 
-sub filter_factory {
+sub _filter_factory {
 	my $class = shift;
 	my $code  = sub {
 		my ( $context, @args ) = @_;
